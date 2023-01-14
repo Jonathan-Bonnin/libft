@@ -6,7 +6,7 @@
 /*   By: jbonnin <jbonnin@42student.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 16:01:39 by jbonnin           #+#    #+#             */
-/*   Updated: 2023/01/09 16:02:12 by jbonnin          ###   ########.fr       */
+/*   Updated: 2023/01/14 19:06:47 by jbonnin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	j = 0;
 	while (src[j] && j < size - length_dest - 1)
 		dest[i++] = src[j++];
-	if (!src[j]) 
+	if (!src[j])
 		dest[i] = '\0';
 	return (length_src + length_dest);
 }

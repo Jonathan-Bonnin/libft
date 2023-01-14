@@ -6,11 +6,12 @@
 /*   By: jbonnin <jbonnin@42student.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 15:31:34 by jbonnin           #+#    #+#             */
-/*   Updated: 2023/01/09 15:41:43 by jbonnin          ###   ########.fr       */
+/*   Updated: 2023/01/14 19:07:39 by jbonnin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>;
+#include <stdio.h>
+
 void	*ft_memset(void *s, int c, size_t n)
 {
 	int		i;

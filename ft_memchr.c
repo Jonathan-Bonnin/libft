@@ -6,11 +6,11 @@
 /*   By: jbonnin <jbonnin@42student.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 19:21:42 by jbonnin           #+#    #+#             */
-/*   Updated: 2023/01/09 19:24:14 by jbonnin          ###   ########.fr       */
+/*   Updated: 2023/01/14 19:03:59 by jbonnin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void *memchr(const void *s, int c, unsigned int n)
+void	*memchr(const void *s, int c, unsigned int n)
 {
 	int		i;
 	char	*c_s;
@@ -20,7 +20,7 @@ void *memchr(const void *s, int c, unsigned int n)
 	while (c_s[i] != 0 && i < n)
 	{
 		if (c_s[i] == c)
-			return &c_s[i];
+			return (&c_s[i]);
 		i++;
 	}
 	return (0);

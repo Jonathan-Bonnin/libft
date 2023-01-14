@@ -6,7 +6,7 @@
 /*   By: jbonnin <jbonnin@42student.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 18:50:06 by jbonnin           #+#    #+#             */
-/*   Updated: 2023/01/09 19:04:20 by jbonnin          ###   ########.fr       */
+/*   Updated: 2023/01/14 19:04:19 by jbonnin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_strrchr(const char *s, int c)
 	while (i >= 0)
 	{
 		if (s[i] == c)
-			break;
+			break ;
 		i--;
 	}
 	return (&s[i]);
