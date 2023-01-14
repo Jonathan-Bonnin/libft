@@ -6,11 +6,11 @@
 /*   By: jbonnin <jbonnin@42student.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 18:50:06 by jbonnin           #+#    #+#             */
-/*   Updated: 2023/01/14 19:02:28 by jbonnin          ###   ########.fr       */
+/*   Updated: 2023/01/14 20:13:02 by jbonnin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strchr(char *s, int c)
 {
 	int	i;
 

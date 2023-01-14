@@ -6,11 +6,11 @@
 /*   By: jbonnin <jbonnin@42student.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 19:21:42 by jbonnin           #+#    #+#             */
-/*   Updated: 2023/01/14 19:03:59 by jbonnin          ###   ########.fr       */
+/*   Updated: 2023/01/14 20:08:12 by jbonnin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*memchr(const void *s, int c, unsigned int n)
+void	*ft_memchr(const void *s, int c, int n)
 {
 	int		i;
 	char	*c_s;

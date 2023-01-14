@@ -6,11 +6,11 @@
 /*   By: jbonnin <jbonnin@42student.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 20:06:46 by jbonnin           #+#    #+#             */
-/*   Updated: 2023/01/09 20:23:46 by jbonnin          ###   ########.fr       */
+/*   Updated: 2023/01/14 20:12:33 by jbonnin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strnstr(const char *big, const char *little, unsigned int len)
+const char	*ft_strnstr(const char *big, const char *little, int len)
 {
 	int		i;
 	int		j;

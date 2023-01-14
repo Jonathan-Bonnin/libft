@@ -6,13 +6,13 @@
 /*   By: jbonnin <jbonnin@42student.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 15:31:36 by jbonnin           #+#    #+#             */
-/*   Updated: 2023/01/14 19:07:49 by jbonnin          ###   ########.fr       */
+/*   Updated: 2023/01/14 20:04:23 by jbonnin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-void	bzero(void *s, size_t n)
+void	ft_bzero(void *s, int n)
 {
 	int		i;
 	char	*res;

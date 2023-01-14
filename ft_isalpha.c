@@ -6,11 +6,11 @@
 /*   By: jbonnin <jbonnin@42student.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 19:02:04 by jbonnin           #+#    #+#             */
-/*   Updated: 2023/01/14 19:07:20 by jbonnin          ###   ########.fr       */
+/*   Updated: 2023/01/14 20:06:41 by jbonnin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	isalpha(int c)
+int	ft_isalpha(int c)
 {
 	if ((c >= 'a' && c < 'z') || (c >= 'A' && c <= 'Z'))
 		return (1);

@@ -6,11 +6,11 @@
 /*   By: jbonnin <jbonnin@42student.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 18:50:06 by jbonnin           #+#    #+#             */
-/*   Updated: 2023/01/14 19:04:19 by jbonnin          ###   ########.fr       */
+/*   Updated: 2023/01/14 20:13:51 by jbonnin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strrchr(const char *s, int c)
+char	*ft_strrchr(char *s, int c)
 {
 	int	i;
 	int	is_c_in_s;

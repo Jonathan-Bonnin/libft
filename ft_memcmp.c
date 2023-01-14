@@ -6,11 +6,11 @@
 /*   By: jbonnin <jbonnin@42student.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 19:58:26 by jbonnin           #+#    #+#             */
-/*   Updated: 2023/01/14 19:02:16 by jbonnin          ###   ########.fr       */
+/*   Updated: 2023/01/14 20:06:24 by jbonnin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	memcmp(char *s1, char *s2, unsigned int n)
+int	ft_memcmp(char *s1, char *s2, unsigned int n)
 {
 	unsigned int	i;
 

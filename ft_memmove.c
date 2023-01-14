@@ -6,19 +6,20 @@
 /*   By: jbonnin <jbonnin@42student.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 15:43:22 by jbonnin           #+#    #+#             */
-/*   Updated: 2023/01/14 19:03:12 by jbonnin          ###   ########.fr       */
+/*   Updated: 2023/01/14 20:10:25 by jbonnin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-void	*memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dest, const void *src, int n)
 {
 	int		i;
 	char	*c_dest;
 	char	*c_src;
 	char	*temp;
 
+	temp = 0;
 	c_dest = (char *) dest;
 	c_src = (char *) src;
 	i = 0;
