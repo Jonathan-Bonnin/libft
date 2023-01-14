@@ -6,7 +6,7 @@
 /*   By: jbonnin <jbonnin@42student.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 11:57:42 by jbonnin           #+#    #+#             */
-/*   Updated: 2023/01/09 20:20:47 by jbonnin          ###   ########.fr       */
+/*   Updated: 2023/01/14 20:55:14 by jbonnin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	ft_atoi(char *str)
 	sign = 1;
 	while (is_white_space(str[i]))
 		i++;
-	while (str[i] == '+' || str[i] == '-')
+	if (str[i] == '+' || str[i] == '-')
 		if (str[i++] == '-')
 			sign *= -1;
 	if (!(str[i] >= '0' && str[i] <= '9'))
