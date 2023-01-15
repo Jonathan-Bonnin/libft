@@ -1,32 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jbonnin <jbonnin@42student.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/09 15:43:22 by jbonnin           #+#    #+#             */
-/*   Updated: 2023/01/15 19:38:16 by jbonnin          ###   ########.fr       */
+/*   Created: 2023/01/15 18:56:21 by jbonnin           #+#    #+#             */
+/*   Updated: 2023/01/15 19:03:31 by jbonnin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
-void	*ft_memmove(void *dest, const void *src, int n)
+void	*ft_calloc(int nmemb, int size)
 {
-	int			i;
-	char		*c_dest;
-	const char	*c_src;
+	int		total_size;
+	void	*dest;
 
-	if (dest < src)
-		return (ft_memcpy(dest, src, n));
-	c_dest = dest;
-	c_src = src;
-	i = n - 1;
-	while (i >= 0)
-	{
-		c_dest[i] = c_src[i];
-		i--;
-	}
+	total_size = nmemb * size;
+	dest = malloc(total_size);
+	if (!dest)
+		return (0);
+	ft_memset(dest, 0, total_size);
 	return (dest);
 }
