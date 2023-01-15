@@ -6,7 +6,7 @@
 /*   By: jbonnin <jbonnin@42student.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 15:43:22 by jbonnin           #+#    #+#             */
-/*   Updated: 2023/01/14 20:10:25 by jbonnin          ###   ########.fr       */
+/*   Updated: 2023/01/15 18:54:38 by jbonnin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,17 @@
 
 void	*ft_memmove(void *dest, const void *src, int n)
 {
-	int		i;
-	char	*c_dest;
-	char	*c_src;
-	char	*temp;
+	int			i;
+	char		*c_dest;
+	const char	*c_src;
 
-	temp = 0;
-	c_dest = (char *) dest;
-	c_src = (char *) src;
-	i = 0;
-	while (c_src[i] && i < n)
+	c_dest =  dest;
+	c_src = src;
+	i = n - 1;
+	while (i >= 0)
 	{
-		temp[i] = c_src[i];
-		i++;
-	}
-	i = 0;
-	while (temp[i] && i < n)
-	{
-		c_dest[i] = temp[i];
-		i++;
+		c_dest[i] = c_src[i];
+		i--;
 	}
 	return (dest);
 }
