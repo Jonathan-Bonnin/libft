@@ -6,14 +6,14 @@
 /*   By: jbonnin <jbonnin@42student.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 20:02:59 by jbonnin           #+#    #+#             */
-/*   Updated: 2023/01/15 19:51:44 by jbonnin          ###   ########.fr       */
+/*   Updated: 2023/01/17 19:35:10 by jbonnin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdio.h>
+#include <stdlib.h>
 
 /* Part 1 functions */
 int		ft_isalpha(int c);
