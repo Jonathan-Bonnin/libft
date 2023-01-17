@@ -6,22 +6,24 @@
 /*   By: jbonnin <jbonnin@42student.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 18:50:06 by jbonnin           #+#    #+#             */
-/*   Updated: 2023/01/14 20:13:02 by jbonnin          ###   ########.fr       */
+/*   Updated: 2023/01/17 20:36:26 by jbonnin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
-	int	i;
+	int		i;
+	char	*s_c;
 
+	s_c = (char *) s;
 	i = 0;
-	while (s[i])
+	while (s_c[i])
 	{
-		if (s[i] == c)
-			return (&s[i]);
+		if (s_c[i] == c)
+			return (&s_c[i]);
 		i++;
 	}
 	if (c)
 		return (0);
-	return (&s[i]);
+	return (&s_c[i]);
 }

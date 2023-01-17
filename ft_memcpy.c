@@ -6,15 +6,15 @@
 /*   By: jbonnin <jbonnin@42student.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 15:43:22 by jbonnin           #+#    #+#             */
-/*   Updated: 2023/01/15 19:37:34 by jbonnin          ###   ########.fr       */
+/*   Updated: 2023/01/17 20:03:41 by jbonnin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, int n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	int		i;
+	size_t	i;
 	char	*c_dest;
 	char	*c_src;
 

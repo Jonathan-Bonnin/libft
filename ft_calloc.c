@@ -6,16 +6,15 @@
 /*   By: jbonnin <jbonnin@42student.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/15 18:56:21 by jbonnin           #+#    #+#             */
-/*   Updated: 2023/01/15 19:03:31 by jbonnin          ###   ########.fr       */
+/*   Updated: 2023/01/17 20:00:21 by jbonnin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-void	*ft_calloc(int nmemb, int size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	int		total_size;
+	size_t	total_size;
 	void	*dest;
 
 	total_size = nmemb * size;

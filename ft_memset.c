@@ -6,15 +6,15 @@
 /*   By: jbonnin <jbonnin@42student.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 15:31:34 by jbonnin           #+#    #+#             */
-/*   Updated: 2023/01/14 20:10:51 by jbonnin          ###   ########.fr       */
+/*   Updated: 2023/01/17 19:58:31 by jbonnin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-void	*ft_memset(void *s, int c, int n)
+void	*ft_memset(void *s, int c, size_t n)
 {
-	int		i;
+	size_t	i;
 	char	*res;
 
 	i = 0;
