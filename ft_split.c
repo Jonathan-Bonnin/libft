@@ -6,69 +6,65 @@
 /*   By: jbonnin <jbonnin@42student.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 17:14:15 by jbonnin           #+#    #+#             */
-/*   Updated: 2023/01/21 18:22:22 by jbonnin          ###   ########.fr       */
+/*   Updated: 2023/02/04 17:32:07 by jbonnin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include "libft.h"
 
-int	get_word_count(const char *str, char separator);
-int	get_word_len(const char *str, char separator);
+static int	get_word_count(const char *str, char separator);
+static void	place_strs(char **strs, const char *str, char sep, int word_count);
 
-char	**ft_split(const char *str, char c)
+char	**ft_split(const char *s, char separator)
 {
-	int		i;
-	int		j;
-	int		k;
 	int		word_count;
 	char	**split_strs;
 
-	word_count = get_word_count(str, c);
-	split_strs = malloc(sizeof(char *) * word_count + 1);
+	if (!s)
+		return (NULL);
+	word_count = get_word_count(s, separator);
+	split_strs = malloc(sizeof(char *) * (word_count + 1));
 	if (!split_strs)
 		return (NULL);
-	i = 0;
-	j = 0;
-	while (i < word_count)
-	{
-		while (str[j] && str[j] == c)
-			j++;
-		if (str[j])
-			split_strs[i] = malloc(get_word_len(&str[j], c) + 1);
-		k = 0;
-		while (str[j] && str[j] != c)
-			split_strs[i][k++] = str[j++];
-		i++;
-	}
-	split_strs[i] = 0;
+	place_strs(split_strs, s, separator, word_count);
+	split_strs[word_count] = NULL;
 	return (split_strs);
 }
 
-int	get_word_count(const char *str, char separator)
+static int	get_word_count(const char *s, char separator)
 {
-	int	i;
 	int	word_count;
 
 	word_count = 0;
-	i = 0;
-	while (str[i])
+	while (*s)
 	{
-		while (str[i] == separator)
-			i++;
-		if (str[i])
+		while (*s == separator)
+			s++;
+		if (*s)
 			word_count++;
-		while (str[i] && str[i] != separator)
-			i++;
+		while (*s && *s != separator)
+			s++;
 	}
 	return (word_count);
 }
 
-int	get_word_len(const char *str, char separator)
+static void	place_strs(char **strs, const char *str, char sep, int word_count)
 {
-	int	len;
+	int	i;
+	int	word_start;
+	int	current_count;
 
-	len = 0;
-	while (str[len] && str[len] != separator)
-		len++;
-	return (len);
+	i = 0;
+	current_count = 0;
+	while (current_count < word_count)
+	{
+		while (str[i] == sep)
+			i++;
+		word_start = i;
+		while (str[i] && str[i] != sep)
+			i++;
+		strs[current_count] = ft_substr(str, word_start, (i - word_start));
+		current_count++;
+	}
 }
