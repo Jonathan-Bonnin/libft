@@ -6,7 +6,7 @@
 /*   By: jbonnin <jbonnin@42student.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/15 18:56:21 by jbonnin           #+#    #+#             */
-/*   Updated: 2023/01/17 20:00:21 by jbonnin          ###   ########.fr       */
+/*   Updated: 2023/03/11 16:13:22 by jbonnin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,6 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	dest = malloc(total_size);
 	if (!dest)
 		return (0);
-	ft_memset(dest, 0, total_size);
+	ft_bzero(dest, total_size);
 	return (dest);
 }

@@ -6,18 +6,20 @@
 /*   By: jbonnin <jbonnin@42student.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 19:21:42 by jbonnin           #+#    #+#             */
-/*   Updated: 2023/01/14 20:08:12 by jbonnin          ###   ########.fr       */
+/*   Updated: 2023/03/11 13:37:59 by jbonnin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memchr(const void *s, int c, int n)
+#include "libft.h"
+
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	int		i;
+	size_t	i;
 	char	*c_s;
 
 	c_s = (char *) s;
 	i = 0;
-	while (c_s[i] != 0 && i < n)
+	while (i < n)
 	{
 		if (c_s[i] == c)
 			return (&c_s[i]);

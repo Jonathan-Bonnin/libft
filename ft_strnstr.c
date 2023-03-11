@@ -6,7 +6,7 @@
 /*   By: jbonnin <jbonnin@42student.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 20:06:46 by jbonnin           #+#    #+#             */
-/*   Updated: 2023/01/17 20:40:12 by jbonnin          ###   ########.fr       */
+/*   Updated: 2023/03/11 16:02:22 by jbonnin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,21 +16,25 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
 	size_t	j;
-	char	*big_c;
-	char	*little_c;
 
-	big_c = (char *) big;
-	little_c = (char *) little;
+	if (!big || !little)
+		return (NULL);
 	i = 0;
-	if (!little_c[i])
-		return (big_c);
-	while (big_c[i] && i < len)
+	j = 0;
+	if (little[j] == '\0')
+		return ((char *)big);
+	while (big[i] != '\0' && little[j] != '\0' && i < len)
 	{
 		j = 0;
-		while (big_c[i + j] && big_c[i + j] == little_c[j])
-			j++;
-		if (!little_c[j] && i + j < len)
-			return (&big_c[i]);
+		if (big[i] == little[0])
+		{
+			while (big[i + j] == little[j] && (i + j) < len)
+			{
+				if (little[j + 1] == '\0')
+					return ((char *)big + i);
+				j++;
+			}
+		}
 		i++;
 	}
 	return (0);

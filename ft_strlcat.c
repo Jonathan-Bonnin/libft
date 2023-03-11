@@ -6,7 +6,7 @@
 /*   By: jbonnin <jbonnin@42student.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 16:01:39 by jbonnin           #+#    #+#             */
-/*   Updated: 2023/01/17 19:45:47 by jbonnin          ###   ########.fr       */
+/*   Updated: 2023/03/11 14:36:30 by jbonnin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	dst_len;
 
 	src_len = ft_strlen(src);
+	if (dst == 0 && size == 0)
+		return (src_len);
 	dst_len = ft_strlen(dst);
 	if (size <= dst_len)
 		return (size + src_len);
