@@ -26,6 +26,9 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	$(AR) $(NAME) $(OBJ)
 
+bonus:	$(OBJ) $(BNSOBJ)
+	$(AR) $(NAME) $(OBJ) $(BNSOBJ)
+
 clean:
 	$(RM) -f $(OBJ) $(BNSOBJ)
 
