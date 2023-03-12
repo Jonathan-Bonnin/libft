@@ -6,7 +6,7 @@
 /*   By: jbonnin <jbonnin@42student.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/15 19:45:49 by jbonnin           #+#    #+#             */
-/*   Updated: 2023/01/17 21:30:27 by jbonnin          ###   ########.fr       */
+/*   Updated: 2023/03/12 16:21:57 by jbonnin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,12 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	if (!s)
 		return (0);
-	res = malloc(len + 1);
 	s_len = ft_strlen(s);
+	if ((unsigned int) s_len - start < (unsigned int) len)
+		len = s_len - (size_t) start;
+	if (start > s_len)
+		len = 0;
+	res = malloc(len + 1);
 	if (!res)
 		return (0);
 	i = 0;
